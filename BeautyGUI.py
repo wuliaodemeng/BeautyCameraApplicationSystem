@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'BeautyGUI.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(800, 600)
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(11)
+        MainWindow.setFont(font)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.origin_image = QtWidgets.QGraphicsView(self.centralwidget)
+        self.origin_image.setGeometry(QtCore.QRect(50, 30, 321, 341))
+        self.origin_image.setObjectName("origin_image")
+        self.beauty_image = QtWidgets.QGraphicsView(self.centralwidget)
+        self.beauty_image.setGeometry(QtCore.QRect(430, 30, 321, 341))
+        self.beauty_image.setObjectName("beauty_image")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(170, 0, 61, 31))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(570, 0, 61, 31))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(50, 440, 91, 31))
+        self.label_3.setObjectName("label_3")
+        self.filter = QtWidgets.QPushButton(self.centralwidget)
+        self.filter.setGeometry(QtCore.QRect(390, 440, 61, 31))
+        self.filter.setObjectName("filter")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(50, 400, 101, 31))
+        self.label_4.setObjectName("label_4")
+        self.complete_button = QtWidgets.QPushButton(self.centralwidget)
+        self.complete_button.setGeometry(QtCore.QRect(370, 510, 71, 31))
+        self.complete_button.setObjectName("complete_button")
+        self.find_files = QtWidgets.QPushButton(self.centralwidget)
+        self.find_files.setGeometry(QtCore.QRect(470, 400, 61, 31))
+        self.find_files.setObjectName("find_files")
+        self.pic_path = QtWidgets.QLineEdit(self.centralwidget)
+        self.pic_path.setGeometry(QtCore.QRect(170, 400, 281, 31))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        self.pic_path.setFont(font)
+        self.pic_path.setObjectName("pic_path")
+        self.origin_image_label = QtWidgets.QLabel(self.centralwidget)
+        self.origin_image_label.setGeometry(QtCore.QRect(50, 30, 321, 341))
+        self.origin_image_label.setObjectName("origin_image_label")
+        self.beauty_image_label = QtWidgets.QLabel(self.centralwidget)
+        self.beauty_image_label.setGeometry(QtCore.QRect(433, 31, 321, 341))
+        self.beauty_image_label.setObjectName("beauty_image_label")
+        self.grind = QtWidgets.QPushButton(self.centralwidget)
+        self.grind.setGeometry(QtCore.QRect(280, 440, 61, 31))
+        self.grind.setObjectName("grind")
+        self.whiten = QtWidgets.QPushButton(self.centralwidget)
+        self.whiten.setGeometry(QtCore.QRect(170, 440, 61, 31))
+        self.whiten.setObjectName("whiten")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 23))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:11pt; font-weight:600;\">原图</span></p></body></html>"))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:11pt; font-weight:600;\">美颜后</span></p></body></html>"))
+        self.label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:600;\">功能选择：</span></p></body></html>"))
+        self.filter.setText(_translate("MainWindow", "滤镜"))
+        self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-weight:600;\">图片选择：</span></p></body></html>"))
+        self.complete_button.setText(_translate("MainWindow", "完成"))
+        self.find_files.setText(_translate("MainWindow", "浏览"))
+        self.origin_image_label.setText(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
+        self.beauty_image_label.setText(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
+        self.grind.setText(_translate("MainWindow", "磨皮"))
+        self.whiten.setText(_translate("MainWindow", "美白"))
+

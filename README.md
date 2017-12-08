@@ -1,2 +1,2 @@
 # BeautyCameraApplicationSystem-
-goal: complete a kind of beauty camera application system.
+goal: implement a beauty camera application.

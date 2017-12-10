@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'BeautyGUI.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
@@ -32,7 +40,7 @@ class Ui_MainWindow(object):
         self.label_4.setGeometry(QtCore.QRect(50, 400, 101, 31))
         self.label_4.setObjectName("label_4")
         self.complete_button = QtWidgets.QPushButton(self.centralwidget)
-        self.complete_button.setGeometry(QtCore.QRect(370, 510, 71, 31))
+        self.complete_button.setGeometry(QtCore.QRect(370, 520, 71, 31))
         self.complete_button.setObjectName("complete_button")
         self.find_files = QtWidgets.QPushButton(self.centralwidget)
         self.find_files.setGeometry(QtCore.QRect(470, 400, 61, 31))
@@ -55,6 +63,24 @@ class Ui_MainWindow(object):
         self.whiten = QtWidgets.QPushButton(self.centralwidget)
         self.whiten.setGeometry(QtCore.QRect(170, 440, 61, 31))
         self.whiten.setObjectName("whiten")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(50, 480, 91, 31))
+        self.label_5.setObjectName("label_5")
+        self.filter_1 = QtWidgets.QPushButton(self.centralwidget)
+        self.filter_1.setGeometry(QtCore.QRect(170, 480, 61, 31))
+        self.filter_1.setObjectName("filter_1")
+        self.filter_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.filter_2.setGeometry(QtCore.QRect(240, 480, 61, 31))
+        self.filter_2.setObjectName("filter_2")
+        self.filter_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.filter_3.setGeometry(QtCore.QRect(310, 480, 61, 31))
+        self.filter_3.setObjectName("filter_3")
+        self.filter_4 = QtWidgets.QPushButton(self.centralwidget)
+        self.filter_4.setGeometry(QtCore.QRect(380, 480, 61, 31))
+        self.filter_4.setObjectName("filter_4")
+        self.filter_5 = QtWidgets.QPushButton(self.centralwidget)
+        self.filter_5.setGeometry(QtCore.QRect(450, 480, 61, 31))
+        self.filter_5.setObjectName("filter_5")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 23))
@@ -81,4 +107,10 @@ class Ui_MainWindow(object):
         self.beauty_image_label.setText(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.grind.setText(_translate("MainWindow", "磨皮"))
         self.whiten.setText(_translate("MainWindow", "美白"))
+        self.label_5.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-weight:600;\">滤镜风格：</span></p></body></html>"))
+        self.filter_1.setText(_translate("MainWindow", "古典"))
+        self.filter_2.setText(_translate("MainWindow", "金暗"))
+        self.filter_3.setText(_translate("MainWindow", "陈旧"))
+        self.filter_4.setText(_translate("MainWindow", "柔黄"))
+        self.filter_5.setText(_translate("MainWindow", "尊白"))
 

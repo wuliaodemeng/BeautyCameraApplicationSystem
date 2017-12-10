@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QFileDialog
 import numpy as np
 from src.whiten import BalanceColor
 from src.grind import mopi
+from src.filter import style_image
 import sys
 import cv2
 import os
@@ -20,6 +21,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.grind.clicked.connect(self.grind_click)
         self.filter.clicked.connect(self.filter_click)
         self.complete_button.clicked.connect(self.complete_button_click)
+        self.filter_1.clicked.connect(self.filter_1_click)
+        self.filter_2.clicked.connect(self.filter_2_click)
+        self.filter_3.clicked.connect(self.filter_3_click)
+        self.filter_4.clicked.connect(self.filter_4_click)
+        self.filter_5.clicked.connect(self.filter_5_click)
 
     def open_file(self):
         file = QFileDialog.getOpenFileName(self, 'open file', sys.path[0])
@@ -61,6 +67,27 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.beauty_image_label.setPixmap(png.scaled(self.beauty_image_label.size()))
         self.cur_image = filter_image
 
+    def filter_1_click(self):
+        self.cur_image = cv2.imread('output/la_muse.jpg')
+        png = QtGui.QPixmap('output/la_muse.jpg')
+        self.beauty_image_label.setPixmap(png.scaled(self.beauty_image_label.size()))
+    def filter_2_click(self):
+        self.cur_image = cv2.imread('output/rain_princess.jpg')
+        png = QtGui.QPixmap('output/rain_princess.jpg')
+        self.beauty_image_label.setPixmap(png.scaled(self.beauty_image_label.size()))
+    def filter_3_click(self):
+        self.cur_image = cv2.imread('output/shipwreck.jpg')
+        png = QtGui.QPixmap('output/shipwreck.jpg')
+        self.beauty_image_label.setPixmap(png.scaled(self.beauty_image_label.size()))
+    def filter_4_click(self):
+        self.cur_image = cv2.imread('output/the_scream.jpg')
+        png = QtGui.QPixmap('output/the_scream.jpg')
+        self.beauty_image_label.setPixmap(png.scaled(self.beauty_image_label.size()))
+    def filter_5_click(self):
+        self.cur_image = cv2.imread('output/udnie.jpg')
+        png = QtGui.QPixmap('output/udnie.jpg')
+        self.beauty_image_label.setPixmap(png.scaled(self.beauty_image_label.size()))
+
     def whiten_func(self, image):
         return BalanceColor(image, 15)
 
@@ -68,6 +95,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         return mopi(image)
 
     def filter_func(self, image):
+        cv2.imwrite('filter_temp.jpg', self.cur_image)
+        image = style_image('filter_temp.jpg')
+        os.remove('filter_temp.jpg')
         return image
 
 if __name__ == "__main__":

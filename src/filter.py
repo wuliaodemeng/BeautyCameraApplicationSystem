@@ -1,13 +1,13 @@
 import tensorflow as tf
 import os
-import utils
-import style_transfer_tester
+from src import utils
+from src import style_transfer_tester
 import argparse
 import time
 
 
-#model_name = ['la_muse','rain_princess','shipwreck','the_scream','udnie','wave']
-model_name = ['shipwreck']
+model_name = ['la_muse','rain_princess','shipwreck','the_scream','udnie']
+#model_name = ['shipwreck']
 model_dict = {}
 for i in model_name:
     model_dict[i]='models/'+i+'.ckpt'
@@ -37,5 +37,3 @@ def style_image(image_path):
 
 
 print("Model hasn't been downloaded now since one model is around 200mb.")
-input()
-style_image('content/chicago.jpg')
